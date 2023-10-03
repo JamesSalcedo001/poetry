@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import PoemsContainer from './PoemsContainer';
 import Navigation from './Navigation';
 import PoemPost from './PoemPost';
+import Home from './Home';
 
 function App() {
 
