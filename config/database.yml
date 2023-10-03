@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: poetry_production
-  username: poetry
-  password: <%= ENV["POETRY_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
