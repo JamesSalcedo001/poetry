@@ -1,6 +1,10 @@
+import PoemCard from "./PoemCard";
+
 function PoemsContainer() {
     return (
-        <div></div>
+        <div>
+            <PoemCard/>
+        </div>
     )
 }
 

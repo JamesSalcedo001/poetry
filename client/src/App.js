@@ -2,6 +2,8 @@ import './App.css';
 
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import PoemsContainer from './PoemsContainer';
+import Navigation from './Navigation';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,9 +16,10 @@ function App() {
 
   return (
       <div className="App">
+        <Navigation/>
         <Routes>
-          <Route path="/testing" element={<h1>Test Route</h1>} />
-          <Route path="/" element={<h1>Page Count: {count}</h1>} />
+          <Route path="/poems" element={<PoemsContainer />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </div>
   );

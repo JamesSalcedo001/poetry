@@ -1,6 +1,9 @@
 function PoemCard() {
     return (
-        <div></div>
+        <div>
+            <h1>Title</h1>
+            <p>Poem goes here</p>
+        </div>
     )
 }
 

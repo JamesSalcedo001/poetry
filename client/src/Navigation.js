@@ -1,6 +1,6 @@
 function Navigation() {
     return (
-        <div></div>
+        <div>Nav bar here</div>
     )
 }
 
