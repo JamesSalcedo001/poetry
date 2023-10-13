@@ -1,9 +1,9 @@
 class Poem < ApplicationRecord
   belongs_to :user
-  after_create :create_posting
+  has_many :comments
 
-  def create_posting
-    Posting.create(title: self.title, preview: self.content.truncate(50), poem: self)
+  def preview
+     self.content.truncate(50)
   end
 
 end

@@ -15,33 +15,22 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_13_050920) do
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.text "content"
-    t.string "name"
+    t.text "content", null: false
     t.bigint "user_id", null: false
-    t.bigint "posting_id", null: false
+    t.bigint "poem_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["posting_id"], name: "index_comments_on_posting_id"
+    t.index ["poem_id"], name: "index_comments_on_poem_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "poems", force: :cascade do |t|
     t.string "title"
     t.text "content"
-    t.date "date_posted"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_poems_on_user_id"
-  end
-
-  create_table "postings", force: :cascade do |t|
-    t.string "title"
-    t.string "preview"
-    t.bigint "poem_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["poem_id"], name: "index_postings_on_poem_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,8 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_13_050920) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "comments", "postings"
+  add_foreign_key "comments", "poems"
   add_foreign_key "comments", "users"
   add_foreign_key "poems", "users"
-  add_foreign_key "postings", "poems"
 end

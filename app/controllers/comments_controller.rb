@@ -3,8 +3,8 @@ class CommentsController < ApplicationController
 
     def create
         comment = Comment.new(comment_params)
-        comment.user = current_user
-        comment.posting_id = params[:posting_id]
+        comment.user = @current_user
+        comment.poem_id = params[:poem_id]
         if comment.save
             render json: comment, status: :created
         else
@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
     private 
 
     def comment_params
-        params.permit(:content, :name)
+        params.permit(:content)
     end
 
 end
