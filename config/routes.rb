@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
  
-  resources :postings, only: [:index, :show] do 
-    resources :comments, only: [:create]
-  end
+    resources :postings, only: [:index, :show] do 
+      resources :comments, only: [:create]
+    end
 
-  resources :poems, only: [:create, :update, :destroy]
-
-  resources :users, only: [:create]
-  
-  get '/hello', to: 'application#hello_world'
+    resources :poems, only: [:create, :update, :destroy]
+    resources :users, only: [:create]
+    
+    post "/login", to: "sessions#create"
+    delete "/logout", to: "sessions#destroy"
 
 
   get '*path',

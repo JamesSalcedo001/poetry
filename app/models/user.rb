@@ -2,10 +2,8 @@ class User < ApplicationRecord
     has_secure_password
 
     has_many :comments
-    has_many :postings if: :admin?
+    has_many :postings
 
-    def admin?
-        self.admin
-    end
+    validates :username, presence: true, uniqueness: true
 
 end
