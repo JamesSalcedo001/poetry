@@ -1,4 +1,4 @@
-function PoemPost() {
+function NewPoemForm() {
     return (
         <div>
             <form>Post Poem here</form>
@@ -6,4 +6,4 @@ function PoemPost() {
     )
 }
 
-export default PoemPost;
+export default NewPoemForm;
