@@ -1,4 +1,4 @@
-function PoemCard() {
+function PoemPreview() {
     return (
         <div>
             <h1>Title</h1>
@@ -7,4 +7,4 @@ function PoemCard() {
     )
 }
 
-export default PoemCard;
+export default PoemPreview;
