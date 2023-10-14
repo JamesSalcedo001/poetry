@@ -1,10 +1,15 @@
+import { useContext } from "react";
+import AllContext from "./context/allContext";
 import PoemPreview from "./PoemPreview";
-import { useState } from "react";
 
 function PoemsList() {
+    const { poems } = useContext(AllContext)
+
     return (
-        <div>
-            <PoemPreview/>
+        <div className="poems-list">
+            {poems.map(poem => (
+                <PoemPreview key={poem.id} poem={poem}/>
+            ))}
         </div>
     )
 }
