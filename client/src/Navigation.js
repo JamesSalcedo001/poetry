@@ -1,7 +1,11 @@
 import {useState} from "react"
+// import { useContext } from "react";
+// import AllContext from "./context/allContext";
 
 function Navigation() {
-    const [loggedIn, setLoggedIn] = useState(false)
+    const [loggedIn, setLoggedIn] = useState(true)
+    // const { loggedIn } = useContext(AllContext)
+
 
 
     if (loggedIn) {

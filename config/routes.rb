@@ -4,10 +4,11 @@ Rails.application.routes.draw do
       resources :comments, only: [:create]
     end
 
-    resources :users, only: [:create]
+    resources :users, only: [:create, :show]
     
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
+    get "/me", to: "users#show"
 
 
   get '*path',
