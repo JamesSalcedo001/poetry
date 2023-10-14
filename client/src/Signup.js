@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
-import { AllContext } from "/context/allContext"
+import { AllContext } from "./context/allContext"
 
 function Signup() {
     const [ formData, setFormData ] = useState({
