@@ -3,7 +3,7 @@ import { AllContext } from "./context/allContext"
 import { useNavigate, NavLink } from "react-router-dom";
 
 function Navigation() {
-    const { loggedIn, logout } = useContext(AllContext)
+    const { loggedIn, logout, user } = useContext(AllContext)
     const navigate = useNavigate()
 
     const logOutUser = () => {
@@ -21,6 +21,7 @@ function Navigation() {
     if (loggedIn) {
         return (
             <div>
+                {user.admin && <NavLink to="/poem_new">Create New Poem</NavLink>}
                 <button onClick={logOutUser}>Log Out</button>
             </div>
         )
