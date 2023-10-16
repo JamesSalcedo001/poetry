@@ -18,7 +18,7 @@ class PoemsController < ApplicationController
         if new_poem.save
             render json: new_poem
         else
-            render json: poem.errors, status: :unprocessable_entity
+            render json: new_poem.errors, status: :unprocessable_entity
         end
     end
 

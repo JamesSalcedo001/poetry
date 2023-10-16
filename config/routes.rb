@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
  
-    resources :poems, only: [:index, :show] do 
+    resources :poems, only: [:index, :show, :create] do 
       resources :comments, only: [:create]
     end
 

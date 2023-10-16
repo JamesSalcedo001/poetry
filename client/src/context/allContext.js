@@ -70,4 +70,4 @@ function AllContextProvider({children}) {
     )
 }
 
-export default AllContextProvider;
+export { AllContextProvider, AllContext };

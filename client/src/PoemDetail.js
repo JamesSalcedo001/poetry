@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { AllContext } from "./context/allContext"
+import { useParams } from "react-router-dom";
 
-function PoemDetail({poemId}) {
+function PoemDetail() {
     const { poems } = useContext(AllContext)
-    const poem = poems.find(p => p.id === poemId)
+    const { poemId } = useParams()
+    const poem = poems.find(p => p.id === parseInt(poemId))
 
     if (!poem) return <p>Poem Not Found!</p>
     return (

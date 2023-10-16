@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import AllContext from "./context/allContext";
+import { AllContext } from "./context/allContext"
 import PoemPreview from "./PoemPreview";
 
 function PoemsList() {

@@ -8,7 +8,7 @@ class ApplicationController < ActionController::API
 
     def authorize
       @current_user = User.find_by(id: session[:user_id])
-      render json: { errors: ["Please Log In"]}, status: :unauthorized unless @current_user
+      render json: { errors: ["Please log in with existing username and password"]}, status: :unauthorized unless @current_user
     end
 
     def require_admin
