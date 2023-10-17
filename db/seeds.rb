@@ -7,50 +7,55 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
+user1 = User.create!({
+    username: "Noor123",
+    password: "Frogs2020",
+    admin: true
+})
 
 
-# user2 = User.create!(
-#     username: "verse_lisa",
-#     password: "password456"
-#   )
+user2 = User.create!(
+    username: "verse_lisa",
+    password: "password456"
+  )
   
-#   user3 = User.create!(
-#     username: "rhyme_tom",
-#     password: "password789"
-#   )
+  user3 = User.create!(
+    username: "rhyme_tom",
+    password: "password789"
+  )
   
 
-# #   Poems
+#   Poems
 
-#   poem1 = Poem.create!(
-#     title: "Nature's Beauty",
-#     content: "The rolling hills, the trees so tall, nature's beauty, it has it all.",
-#     user_id: 1
-#   )
+  poem1 = Poem.create!(
+    title: "Nature's Beauty",
+    content: "The rolling hills, the trees so tall, nature's beauty, it has it all.",
+    user_id: 1
+  )
   
-#   poem2 = Poem.create!(
-#     title: "A Silent Night",
-#     content: "The moon shines bright, on a silent night. The world is calm, in nature's palm.",
-#     user_id: 1
-#   )
+  poem2 = Poem.create!(
+    title: "A Silent Night",
+    content: "The moon shines bright, on a silent night. The world is calm, in nature's palm.",
+    user_id: 1
+  )
   
-#   # Comments
-#   Comment.create!(
-#     content: "Such a soothing poem!",
-#     user_id: 3,
-#     poem: poem1
-#   )
+  # Comments
+  Comment.create!(
+    content: "Such a soothing poem!",
+    user_id: 3,
+    poem: poem1
+  )
   
-#   Comment.create!(
-#     content: "Love the imagery here.",
-#     user_id: 3,
-#     poem: poem2
-#   )
+  Comment.create!(
+    content: "Love the imagery here.",
+    user_id: 3,
+    poem: poem2
+  )
   
-#   Comment.create!(
-#     content: "Beautifully written.",
-#     user_id: 2,
-#     poem: poem1
-#   )
+  Comment.create!(
+    content: "Beautifully written.",
+    user_id: 2,
+    poem: poem1
+  )
   
-#   puts "Seeding complete!"
+  puts "Seeding complete!"
