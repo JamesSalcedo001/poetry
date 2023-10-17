@@ -8,7 +8,7 @@ function NewPoemForm() {
         content: ""
     }) 
 
-    const { title, content } = formData 
+    const { title, content } = formData
 
     const { setPoems } = useContext(AllContext)
 
@@ -16,10 +16,13 @@ function NewPoemForm() {
     const submit = (e) => {
         e.preventDefault()
 
+        
         const poem = {
             title,
             content
         }
+
+        console.log(formData, poem)
 
         fetch("/poems", {
             method: "POST",
@@ -49,10 +52,10 @@ function NewPoemForm() {
         <div>
             <form onSubmit={submit}>
                 <label>Title</label>
-                <input type="text" value={title} onChange={changeHandler}/>
+                <input type="text" value={title} name="title" onChange={changeHandler}/>
 
                 <label>Content</label>
-                <input type="text" value={content} onChange={changeHandler}/>
+                <textarea value={content} name="content" onChange={changeHandler}></textarea>
 
                 <input type="submit" value="Post Poem!" />
             </form>

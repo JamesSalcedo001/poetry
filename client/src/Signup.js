@@ -20,7 +20,7 @@ function Signup() {
             password
         }
 
-        fetch("/signup", {
+        fetch("/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -59,7 +59,7 @@ function Signup() {
                 <input className="formInput" type="text" name="username" onChange={changeHandler} value={username} />
 
                 <label htmlFor="password"></label>
-                <input className="formInput" type="text" name="password" onChange={changeHandler} value={password} />
+                <input className="formInput" type="password" name="password" onChange={changeHandler} value={password} />
 
                 <input className="formInput" type="submit" name="" value="Sign Up!" />
             </form>

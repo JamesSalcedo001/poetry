@@ -8,11 +8,11 @@ class ApplicationController < ActionController::API
 
     def authorize
       @current_user = User.find_by(id: session[:user_id])
-      render json: { errors: ["Please log in with existing username and password"]}, status: :unauthorized unless @current_user
+      render json: { user: nil }, status: :ok unless @current_user
     end
 
     def require_admin
-      render json: { errors: ["only admins can perform this action"] }, status: :forbidden unless current_user&.admin?
+      render json: { errors: ["only admins can perform this action"] }, status: :forbidden unless @current_user&.admin?
     end
 
     def render_unprocessable_entity_response(invalid)

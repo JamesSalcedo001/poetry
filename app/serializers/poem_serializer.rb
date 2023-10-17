@@ -7,5 +7,4 @@ class PoemSerializer < ActiveModel::Serializer
     object.content.truncate(50)
   end
 
-  
 end

@@ -1,6 +1,11 @@
+import PoemsList from './PoemsList';
+
+
 function Home() {
     return (
-        <div>Home Component</div>
+        <div>
+            <PoemsList />
+        </div>
     )
 }
 

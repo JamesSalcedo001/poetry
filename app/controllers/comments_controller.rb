@@ -1,5 +1,12 @@
 class CommentsController < ApplicationController
-    before_action :require_login
+    before_action :authorize, only: [:create]
+    skip_before_action :authorize, only: [:index]
+
+
+    def index
+        poem = Poem.find(params[:poem_id])
+        render json: poem.comments
+    end
 
     def create
         comment = Comment.new(comment_params)

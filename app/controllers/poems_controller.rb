@@ -1,5 +1,6 @@
 class PoemsController < ApplicationController
     before_action :require_admin, only: [:create]
+    skip_before_action :authorize, only: [:index, :show]
 
 
     def index
@@ -14,7 +15,7 @@ class PoemsController < ApplicationController
 
     def create
         new_poem = Poem.new(poem_params)
-        new_poem.user = current_user
+        new_poem.user = @current_user
         if new_poem.save
             render json: new_poem
         else

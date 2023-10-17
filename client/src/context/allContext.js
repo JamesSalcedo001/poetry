@@ -11,35 +11,40 @@ function AllContextProvider({children}) {
     const [loggedIn, setLoggedIn] = useState(false)
     const [errors, setErrors] = useState([])
     const [comments, setComments] = useState([])
+    // const [isAdmin, setIsAdmin] = useState(false)
 
 
     useEffect(() => {
         fetch("/me")
         .then(res => res.json())
         .then(data => {
-            setUser(data)
-            if (data.errors) {
-                setLoggedIn(false)
-                setErrors(data.errors)
-            } else {
+            if (data.username) {
+                setUser(data)
                 setLoggedIn(true)
                 fetchPoems()
-                fetchComments()
+            } else {
+                setUser({})
+                console.log(user)
+                setLoggedIn(false)
+                fetchPoems()
             }
+        })
+        .catch(error => {
+            console.error("Error fetching user", error)
         })
     },[])
 
 
     const fetchPoems = () => {fetch("/poems").then(res => res.json()).then(data => setPoems(data))}
 
-    const fetchComments = () => {fetch("/comments").then(res => res.json()).then(data => setComments(data))}
+    // const fetchComments = () => {fetch("/comments").then(res => res.json()).then(data => setComments(data))}
 
 
 
     const login = (user) => {
         setUser(user)
         fetchPoems()
-        fetchComments()
+        // fetchComments()
         setLoggedIn(true)
         setErrors([])
     }
@@ -49,7 +54,7 @@ function AllContextProvider({children}) {
     const signup = (user) => {
         setUser(user)
         fetchPoems()
-        fetchComments()
+        // fetchComments()
         setLoggedIn(true)
         setErrors([])
     }
@@ -64,7 +69,7 @@ function AllContextProvider({children}) {
 
 
     return (
-        <AllContext.Provider value={{ user, poems, comments, loggedIn, logout, signup, login, errors, setErrors }}>
+        <AllContext.Provider value={{ user, poems, comments, loggedIn, logout, signup, login, errors, setErrors, setComments, setPoems }}>
             {children}
         </AllContext.Provider>
     )
