@@ -43,19 +43,19 @@ user2 = User.create!(
   Comment.create!(
     content: "Such a soothing poem!",
     user_id: 3,
-    poem: poem1
+    poem_id: poem1.id
   )
   
   Comment.create!(
     content: "Love the imagery here.",
     user_id: 3,
-    poem: poem2
+    poem_id: poem2.id
   )
   
   Comment.create!(
     content: "Beautifully written.",
     user_id: 2,
-    poem: poem1
+    poem_id: poem1.id
   )
   
   puts "Seeding complete!"
