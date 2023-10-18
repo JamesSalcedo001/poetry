@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(231, 241, 190);
+  background-color: #FBE8A6;
 }
 
 code {
@@ -13,3 +13,30 @@ code {
     monospace;
 }
 
+.poems-list {
+  /* background-color: #3036C6; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10rem auto;
+  padding: 3rem;
+}
+
+.poem-preview {
+  background-color: #F4976C;
+  border-radius: 1rem;
+  color: #D2FDFF;
+  text-align: center;
+  width: 85%;
+  height: 10rem;
+  margin-bottom: 1.5rem;
+}
+
+.poem-links {
+  text-decoration: none;
+  color: #3036C6;
+}
+
+.nav-links {
+  margin-inline: 3rem;
+}

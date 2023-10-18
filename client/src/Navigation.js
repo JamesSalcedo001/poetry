@@ -22,11 +22,11 @@ function Navigation() {
         return (
             <div>
                 {user.admin ? 
-                <NavLink to="/poem_new">
+                <NavLink className="nav-links" to="/poem_new">
                     <button>Create New Poem</button>
                 </NavLink> : null}
 
-                <NavLink to="/">
+                <NavLink className="nav-links" to="/">
                     <button>Home</button>
                 </NavLink>
                 <button onClick={logOutUser}>Log Out</button>
@@ -35,14 +35,14 @@ function Navigation() {
     } else {
         return (
             <div>
-                <NavLink to="/">
+                <NavLink className="nav-links" to="/">
                     <button>Home</button>
                 </NavLink>
-                <NavLink to="/login">
+                <NavLink className="nav-links" to="/login">
                     <button>Log In</button>
                 </NavLink>
 
-                <NavLink to="/signup">
+                <NavLink className="nav-links" to="/signup">
                     <button>Sign Up</button>
                 </NavLink>
             </div>
