@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FBE8A6;
+  background-color: #F4976C;
 }
 
 code {
@@ -23,9 +23,9 @@ code {
 }
 
 .poem-preview {
-  background-color: #F4976C;
+  background-color: #FBE8A6;
   border-radius: 1rem;
-  color: #D2FDFF;
+  color: #F4976C;
   text-align: center;
   width: 85%;
   height: 10rem;
@@ -37,6 +37,35 @@ code {
   color: #3036C6;
 }
 
+.poem-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem auto;
+  padding: 1rem; 
+  background-color: #FBE8A6;
+  border-radius: 1rem;
+  color: #F4976C;
+  text-align: center;
+  width: 85%;
+  height: auto;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav-links {
-  margin-inline: 3rem;
+  margin: 1rem 0.3rem;
+}
+
+.nav-buttons {
+    background-color: #FBE8A6;
+    color: #3036C6;
+    width: 6rem;
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+    font-weight: bolder;
 }

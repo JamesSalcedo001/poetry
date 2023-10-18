@@ -20,30 +20,30 @@ function Navigation() {
 
     if (loggedIn) {
         return (
-            <div>
+            <div className="nav-container">
                 {user.admin ? 
                 <NavLink className="nav-links" to="/poem_new">
-                    <button>Create New Poem</button>
+                    <button className="nav-buttons">Create New Poem</button>
                 </NavLink> : null}
 
                 <NavLink className="nav-links" to="/">
-                    <button>Home</button>
+                    <button className="nav-buttons">Home</button>
                 </NavLink>
-                <button onClick={logOutUser}>Log Out</button>
+                <button className="nav-buttons" onClick={logOutUser}>Log Out</button>
             </div>
         )
     } else {
         return (
-            <div>
+            <div className="nav-container">
                 <NavLink className="nav-links" to="/">
-                    <button>Home</button>
+                    <button className="nav-buttons">Home</button>
                 </NavLink>
                 <NavLink className="nav-links" to="/login">
-                    <button>Log In</button>
+                    <button className="nav-buttons">Log In</button>
                 </NavLink>
 
                 <NavLink className="nav-links" to="/signup">
-                    <button>Sign Up</button>
+                    <button className="nav-buttons">Sign Up</button>
                 </NavLink>
             </div>
         )
