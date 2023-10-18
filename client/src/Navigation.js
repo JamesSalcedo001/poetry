@@ -35,6 +35,9 @@ function Navigation() {
     } else {
         return (
             <div>
+                <NavLink to="/">
+                    <button>Home</button>
+                </NavLink>
                 <NavLink to="/login">
                     <button>Log In</button>
                 </NavLink>
