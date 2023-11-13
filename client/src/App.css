@@ -69,3 +69,7 @@ code {
     padding: 0.5rem;
     font-weight: bolder;
 }
+
+.comments-container {
+  background-color: #3036C6;
+}
