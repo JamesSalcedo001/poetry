@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react"
+import CommentCard from "./CommentCard";
 
 
 function CommentList({ loggedIn, comments, setComments, poemId}) {
@@ -42,11 +43,7 @@ function CommentList({ loggedIn, comments, setComments, poemId}) {
 
     return (
         <div className="comments-container">
-            <ul>
-                {poemComments.map(comment => (
-                    <li key={comment.id}>{comment.content} - <span>Posted by: {comment.user.username}</span></li>
-                ))}
-            </ul>
+           
             {loggedIn ? (
                 <form onSubmit={handleAddComment}>
                     <input type="text" value={newComment} onChange={e => setNewComment(e.target.value)} placeholder="Add a comment...">
@@ -56,6 +53,9 @@ function CommentList({ loggedIn, comments, setComments, poemId}) {
             ) : (
                 <p>You need to <Link to="/login">log in</Link> or <Link to="/signup">sign up</Link> to comment</p>
             )}
+             <ul className="comments">
+                {poemComments.map(comment => ( <CommentCard key={comment.id} comment={comment}/> ))}
+            </ul>
         </div>
     )
 }

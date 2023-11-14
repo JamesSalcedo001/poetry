@@ -1,11 +1,10 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F4976C;
 }
 
 code {
@@ -14,7 +13,6 @@ code {
 }
 
 .poems-list {
-  /* background-color: #3036C6; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,9 +21,9 @@ code {
 }
 
 .poem-preview {
-  background-color: #FBE8A6;
+  background-color: black;
   border-radius: 1rem;
-  color: #F4976C;
+  color: white;
   text-align: center;
   width: 85%;
   height: 10rem;
@@ -34,21 +32,15 @@ code {
 
 .poem-links {
   text-decoration: none;
-  color: #3036C6;
+  color: white;
 }
 
 .poem-detail {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 3rem auto;
-  padding: 1rem; 
-  background-color: #FBE8A6;
-  border-radius: 1rem;
-  color: #F4976C;
   text-align: center;
-  width: 85%;
-  height: auto;
+  color: white;
+  background-color: black;
+  border-radius: 1rem;
+  padding: 1rem; 
 }
 
 .nav-container {
@@ -62,14 +54,50 @@ code {
 }
 
 .nav-buttons {
-    background-color: #FBE8A6;
-    color: #3036C6;
+    background-color: black;
+    color: white;
     width: 6rem;
     border-radius: 0.6rem;
     padding: 0.5rem;
     font-weight: bolder;
 }
 
+
 .comments-container {
-  background-color: #3036C6;
+  margin-top: 10rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.comment-card {
+  color: black;
+  background-color: white;
+  border-radius: 0.6rem;
+  min-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.comments {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+ */
+
+
+ body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
