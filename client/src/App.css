@@ -89,15 +89,48 @@ code {
 
 
  body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #eee2dc;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.poems-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10rem auto;
+  padding: 0.5rem;
+}
+
+.poem-preview {
+  background-color: #edc7b7;
+  font-style: italic;
+  font-weight:700;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: #123C69;
+  text-align: center;
+  width: 95%;
+  height: 14rem;
+  margin-bottom: 1.5rem;
+}
+
+.poem-links {
+  text-decoration: none;
+  color: #AC3B61;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.poem-content {
+  margin-top: 3rem;
+}
+
